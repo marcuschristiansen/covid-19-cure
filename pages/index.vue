@@ -48,7 +48,7 @@ export default {
   methods: {
     async fetchNewsArticles() {
       await axios
-        .get(`http://newsapi.org/v2/everything?qInTitle=${this.searchString}&sortBy=publishedAt&apiKey=6cc79d1255a44ad0b79a346ef065cf3d`)
+        .get(`https://newsapi.org/v2/everything?qInTitle=${this.searchString}&sortBy=publishedAt&apiKey=6cc79d1255a44ad0b79a346ef065cf3d`)
         .then(response => (this.newsArticles = response.data.articles))
     }
   },
